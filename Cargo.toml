@@ -1,0 +1,13 @@
+[package]
+name = "qemu-stormcrow"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dbus = "0.9.7"
+dbus-crossroads = "0.5.2"
+mio = {version = "0.8.5", features = ["os-ext"] }
+virt = "0.2.12"
+udev = {version = "0.7.0", features = ["mio08"] }
