@@ -12,7 +12,7 @@ libvirt supports permanently mapping a USB device to a VM, or dynamically attach
 
 qemu-stormcrow should be launched as a daemon first.  `cargo run` in a terminal, or write a systemd service, or spawn it in the background from a script, or whatever.  It does not self-daemonize.
 
-A USB device with a (=Vendor ID=, =Product ID=) pair is registered for a running libvirt VM via D-Bus:
+A USB device with a (`Vendor ID`, `Product ID`) pair is registered for a running libvirt VM via D-Bus:
 
 ```bash
 $ dbus-send --type=method_call --print-reply --dest=com.stormcrow.device /device com.stormcrow.device.Add string:<VM> string:<VID> string:<PID>
